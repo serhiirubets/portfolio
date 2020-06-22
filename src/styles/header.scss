@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  padding: 10px;
   background-image: url('/img/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: center top;
@@ -8,10 +7,10 @@
 
   &:after, &:before {
     content: "";
-    bottom: 20px;
+    bottom: 0;
     position: absolute;
     width: 51%;
-    height: 149px;
+    height: 9vw;
     background-size: cover;
   }
 
