@@ -1,4 +1,6 @@
-h1 {
-  color: blue;
-  font-size: 18px;
-}
+@import "~normalize.css";
+@import "header";
+@import "common";
+@import "socials";
+
+
