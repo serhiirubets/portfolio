@@ -2,6 +2,10 @@
   display: none;
 }
 
+body {
+  position: relative;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -14,4 +18,9 @@ h1, h2 {
 
 .container {
   padding: 35px 30px;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none!important;
 }

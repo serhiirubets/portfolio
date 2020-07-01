@@ -1,1 +1,33 @@
+<footer class="footer">
+  <div class="footer__links">
+    <ul class="footer__links-list">
+      {{#each footerLinks}}
+        <li class="footer__item">
+          <a class="footer__link" href="{{href}}">
+            {{text}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+
+    <ul class="footer__socials">
+      {{#each footerSocials}}
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="{{url}}" target="_blank">
+            <img src="/img/icons/{{icon}}.svg" alt="">
+            <span>{{text}}</span>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="footer__text">
+    <p>
+      Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамка
+    </p>
+    <p>
+      © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    </p>
+  </div>
+</footer>
 <script src="/index.js"></script>

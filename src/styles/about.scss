@@ -75,7 +75,7 @@
   }
 
   &__info {
-    width: 350px;
+    width: 445px;
   }
 
   &__photo {
@@ -111,7 +111,7 @@
     }
 
     &-text {
-      margin-bottom: 60px;
+      margin-bottom: 51px;
       font-size: 16px;
       line-height: 1.5;
       font-family: 'Roboto', sans-serif;
@@ -121,7 +121,9 @@
 
   &__skills {
     &-list {
-      margin-bottom: 40px;
+      margin-bottom: 22px;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     &-title {
@@ -134,9 +136,12 @@
 
     &-item {
       margin-bottom: 15px;
-      vertical-align: middle;
-      display: inline-block;
       position: relative;
+      margin-right: 40px;
+
+      &:last-child {
+        margin-left: 0;
+      }
 
       p {
         position: absolute;
@@ -144,6 +149,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
+        color: #0e695c;
       }
     }
   }

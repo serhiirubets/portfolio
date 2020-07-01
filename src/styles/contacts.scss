@@ -1,15 +1,16 @@
 .contacts {
   position: absolute;
-  min-width: 380px;
+  min-width: 290px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 30px 45px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
 
   &__title {
     text-align: center;
+    margin-bottom: 35px;
 
     h2 {
       position: relative;
@@ -33,7 +34,11 @@
   }
 
   &__item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
