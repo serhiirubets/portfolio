@@ -4,7 +4,7 @@ const path = require('path')
 const homeRoute = require('./routes/home')
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8765
 
 const hbs = exphbs.create({
   defaultLayout: 'main',

@@ -1,0 +1,21 @@
+$line-width: 23px;
+$gap: -25px - ($line-width / 2);
+@mixin title-line($position, $align, $color) {
+  position: absolute;
+  width: $line-width;
+  height: 5px;
+
+  background: $color;
+
+  @if $position == 'before' {
+    left: $gap;
+  }
+
+  @if $position == 'after' {
+    right: $gap;
+  }
+
+  @if $align == 'center' {
+    top: 50%;
+  }
+}

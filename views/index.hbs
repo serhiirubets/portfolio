@@ -28,3 +28,50 @@
     {{> navbar}}
   </div>
 </header>
+
+<section class="about">
+  <div class="about__me about__me--general">
+    <div class="about__main-title"><h2>About me</h2></div>
+    <div class="about__info">
+      <div class="about__photo">
+        <img src="/img/rubets-photo.jpg" alt="rubets photo">
+      </div>
+      <div class="about__me-subtitle">
+        <h2>Who am I</h2>
+      </div>
+      <div class="about__me-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eligendi id laboriosam magni nihil
+        perspiciatis provident quod rem vitae voluptates? Ad aliquid consequatur
+        deleniti distinctio dolorem dolores earum fugit id nihil nostrum odit placeat qui quisquam, rerum sequi,
+        tempore vero!
+      </div>
+    </div>
+  </div>
+  <div class="about__me">
+    <div class="about__me-subtitle"><h2>How can i be useful</h2></div>
+    <div class="about__me-text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eligendi id laboriosam magni nihil
+    </div>
+
+    <ul class="about__skills">
+      {{#each skills}}
+       <li>
+         <h2 class="about__skills-title">{{title}}</h2>
+         <ul class="about__skills-list">
+           {{#each items}}
+             <li class="about__skills-item">
+               <svg width="146" height="146" class="g-circles">
+                 <circle r="60" cx="73" cy="73" stroke="#ccc" fill="none" />
+                 <circle r="60" cx="73" cy="73" transform="rotate(-90 73 73)" stroke="#16c2aa" class="sector" />
+               </svg>
+               <p>
+                 {{title}}
+               </p>
+             </li>
+           {{/each}}
+         </ul>
+       </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
