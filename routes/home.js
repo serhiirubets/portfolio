@@ -69,6 +69,28 @@ const skills = [
     ]
   }
 ]
+const contacts = [
+  {
+    text: 'amatorsergey',
+    icon: 'skype.svg',
+    href: 'skype:amatorsergey',
+  },
+  {
+    text: 'serhii.rubets@gmail.com',
+    icon: 'envelope.svg',
+    href: 'mailto:serhii.rubets@gmail.com',
+  },
+  {
+    text: '+380639997792',
+    icon: 'phone.svg',
+    href: 'tel:+380639997792',
+  },
+  {
+    text: 'Ukraine, Kyiv',
+    icon: 'map_marker.svg',
+    href: 'https://goo.gl/maps/tj5j8kbDghTLShB37',
+  },
+]
 
 router.get('/', (req, res) => {
   res.render('index', {
@@ -76,6 +98,7 @@ router.get('/', (req, res) => {
     isHome: true,
     links,
     skills,
+    contacts,
   })
 })
 

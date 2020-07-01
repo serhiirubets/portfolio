@@ -75,3 +75,23 @@
     </ul>
   </div>
 </section>
+
+<section class="map-container">
+  <div id="map" class="map"></div>
+  <div class="contacts">
+    <div class="contacts__title">
+      <h2>Contacts</h2>
+    </div>
+    <ul class="contacts__list">
+      {{#each contacts}}
+        <li class="contacts__item">
+          <a class="contacts__link" href="{{href}}">
+            <img src="/img/icons/{{icon}}" alt="">
+            <span>{{text}}</span>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+

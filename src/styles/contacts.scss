@@ -1,0 +1,51 @@
+.contacts {
+  position: absolute;
+  min-width: 380px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 45px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      position: relative;
+      display: inline-block;
+      font-weight: 500;
+      color: #455a64;
+
+      font-family: 'bernier-regular', 'sans-serif';
+      text-align: center;
+      font-size: 35px;
+
+      &:before {
+        @include title-line('before', 'center', lighten(#455a64, 40%));
+        content: '';
+      }
+      &:after {
+        @include title-line('after', 'center', lighten(#455a64, 40%));
+        content: '';
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: #455a64;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
