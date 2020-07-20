@@ -7,6 +7,10 @@
       width: 50%;
       display: flex;
       justify-content: space-between;
+
+      @include breakpoint(xl) {
+        flex-direction: column;
+      }
     }
 
     padding-top: 20px;
@@ -43,6 +47,10 @@
       flex-grow: 1;
       text-align: center;
 
+      @include breakpoint(xl) {
+        margin-bottom: 60px;
+      }
+
       h2 {
         position: relative;
         z-index: 1;
@@ -70,12 +78,30 @@
         height: 175px;
         background-image: url('/img/about_header.svg');
         opacity: 0.07;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint(xl) {
+          width: 466px;
+          height: 164px;
+          top: -55px;
+        }
+
+        @include breakpoint(l) {
+          width: 406px;
+          height: 135px;
+          top: -25px;
+        }
       }
     }
   }
 
   &__info {
     width: 445px;
+
+    @include breakpoint(xl) {
+      margin: auto;
+    }
   }
 
   &__photo {

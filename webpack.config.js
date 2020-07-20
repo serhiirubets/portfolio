@@ -36,5 +36,6 @@ module.exports = {
       filename: 'index.css',
     }),
   ],
-  watch: process.env.NODE_ENV !== 'production'
+  watch: process.env.NODE_ENV !== 'production',
+  mode: process.env.NODE_ENV === 'dev' ? 'development' :'production',
 };

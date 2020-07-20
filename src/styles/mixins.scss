@@ -1,5 +1,6 @@
 $line-width: 23px;
 $gap: -25px - ($line-width / 2);
+
 @mixin title-line($position, $align, $color) {
   position: absolute;
   width: $line-width;
@@ -17,5 +18,45 @@ $gap: -25px - ($line-width / 2);
 
   @if $align == 'center' {
     top: 50%;
+  }
+}
+
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (max-width: 1700px) {
+      @content
+    }
+  }
+  @if $point == l {
+    @media (max-width: 1400px) {
+      @content
+    }
+  }
+  @if $point == md {
+    @media (max-width: 1199px) {
+      @content
+    }
+  }
+  @if $point == sm {
+    @media (max-width: 991px) {
+      @content
+    }
+  }
+  @if $point == xs {
+    @media (max-width: 767px) {
+      @content
+    }
+  }
+
+  @if ($point == xxs) {
+    @media (max-width: 640px) {
+      @content
+    }
+  }
+  @if ($point == xxxs) {
+    @media (max-width: 480px) {
+      @content
+    }
   }
 }
