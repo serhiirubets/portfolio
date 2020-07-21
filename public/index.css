@@ -822,7 +822,6 @@ h1, h2 {
 }
 
 .sector {
-  stroke-dasharray: 188, 376;
   transition: all 1s;
 }
 

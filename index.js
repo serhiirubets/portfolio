@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const path = require('path')
-const homeRoute = require('./routes/home')
+const homeRoute = require('./server/routes/home')
 
 const app = express()
 const PORT = process.env.PORT || 8765
@@ -13,7 +13,7 @@ const hbs = exphbs.create({
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
-app.set('views', 'views')
+app.set('views', 'server/views')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
