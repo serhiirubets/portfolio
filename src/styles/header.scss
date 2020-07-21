@@ -6,6 +6,11 @@
   background-position: center top;
   min-height: 603px;
 
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
   @include breakpoint(sm) {
     min-height: 514px;
   }

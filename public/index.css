@@ -368,6 +368,10 @@ template {
   background-position: center top;
   min-height: 603px;
 }
+.header .container {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 991px) {
   .header {
     min-height: 514px;
@@ -760,6 +764,13 @@ h1, h2 {
     margin-bottom: 10px;
     padding: 0 15px;
   }
+}
+.about__me-text a {
+  color: #16c2aa;
+  text-decoration: none;
+}
+.about__me-text a:hover {
+  text-decoration: underline;
 }
 .about__skills-list {
   margin-bottom: 22px;
