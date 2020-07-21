@@ -1,12 +1,16 @@
 .contacts {
   position: absolute;
-  min-width: 290px;
+  min-width: 350px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 30px 45px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
+
+  @include breakpoint(sm) {
+    top: 38%;
+  }
 
   &__title {
     text-align: center;

@@ -368,6 +368,11 @@ template {
   background-position: center top;
   min-height: 603px;
 }
+@media (max-width: 991px) {
+  .header {
+    min-height: 514px;
+  }
+}
 .header:after, .header:before {
   content: "";
   bottom: 0;
@@ -384,17 +389,33 @@ template {
   right: 0;
   background-image: url("/img/about_bg_right.svg");
 }
+@media (max-width: 767px) {
+  .header:before {
+    background-image: url("/img/about_bg_left.svg");
+    transform: scaleX(-1);
+  }
+}
 .header__nav {
   margin-bottom: 88px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
+@media (max-width: 991px) {
+  .header__nav {
+    margin-bottom: 48px;
+  }
+}
 .header__info {
   position: relative;
   text-align: center;
   color: white;
   margin-bottom: 128px;
+}
+@media (max-width: 991px) {
+  .header__info {
+    margin-bottom: 93px;
+  }
 }
 .header__info-inner {
   position: relative;
@@ -417,6 +438,18 @@ template {
   .header__info:before {
     width: 965px;
     height: 240px;
+  }
+}
+@media (max-width: 991px) {
+  .header__info:before {
+    width: 725px;
+    height: 190px;
+    top: -24px;
+  }
+}
+@media (max-width: 735px) {
+  .header__info:before {
+    display: none;
   }
 }
 .header__menu {
@@ -460,6 +493,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
 }
@@ -501,8 +538,18 @@ h1, h2 {
   display: flex;
   position: relative;
 }
+@media (max-width: 767px) {
+  .about {
+    display: block;
+  }
+}
 .about__me {
-  padding-top: 20px;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .about__me {
+    text-align: center;
+  }
 }
 .about__me--general {
   width: 50%;
@@ -511,17 +558,26 @@ h1, h2 {
 }
 @media (max-width: 1700px) {
   .about__me--general {
-    flex-direction: column;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .about__me--general {
+    padding-top: 35px;
+    width: 100%;
   }
 }
 .about__me:first-child {
   background-color: #f0efe9;
-  padding-right: 20px;
 }
 .about__me:last-child {
   width: 51%;
   background-color: #f0ebe0;
-  padding-left: 20px;
+}
+@media (max-width: 767px) {
+  .about__me:last-child {
+    width: 100%;
+  }
 }
 .about__me-subtitile:before {
   position: absolute;
@@ -550,12 +606,22 @@ h1, h2 {
     margin-bottom: 60px;
   }
 }
+@media (max-width: 767px) {
+  .about__main-title {
+    margin-bottom: 42px;
+  }
+}
 .about__main-title h2 {
   position: relative;
   z-index: 1;
   display: inline-block;
   font-size: 63px;
   line-height: 1.2;
+}
+@media (max-width: 991px) {
+  .about__main-title h2 {
+    font-size: 49px;
+  }
 }
 .about__main-title h2:before {
   position: absolute;
@@ -602,8 +668,15 @@ h1, h2 {
     top: -25px;
   }
 }
+@media (max-width: 991px) {
+  .about__main-title:after {
+    width: 315px;
+    height: 110px;
+    top: -32px;
+  }
+}
 .about__info {
-  width: 445px;
+  max-width: 445px;
 }
 @media (max-width: 1700px) {
   .about__info {
@@ -624,9 +697,33 @@ h1, h2 {
   font-size: 35px;
   color: #455a64;
 }
+.about__me-subtitle br {
+  display: none;
+}
+@media (max-width: 991px) {
+  .about__me-subtitle br {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .about__me-subtitle br {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .about__me-subtitle {
+    margin-bottom: 10px;
+  }
+}
 .about__me-subtitle h2 {
   position: relative;
   display: inline-block;
+}
+@media (max-width: 991px) {
+  .about__me-subtitle h2 {
+    line-height: 1;
+    font-size: 30px;
+  }
 }
 .about__me-subtitle h2:before {
   position: absolute;
@@ -653,10 +750,32 @@ h1, h2 {
   font-family: "Roboto", sans-serif;
   color: #455a64;
 }
+@media (max-width: 991px) {
+  .about__me-text {
+    margin-bottom: 23px;
+  }
+}
+@media (max-width: 767px) {
+  .about__me-text {
+    margin-bottom: 10px;
+    padding: 0 30px;
+  }
+}
 .about__skills-list {
   margin-bottom: 22px;
   display: flex;
   flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .about__skills-list {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .about__skills-list {
+    margin-left: 0;
+    justify-content: space-between;
+  }
 }
 .about__skills-title {
   margin-bottom: 18px;
@@ -665,10 +784,20 @@ h1, h2 {
   font-size: 28px;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  .about__skills-title {
+    font-size: 21px;
+  }
+}
 .about__skills-item {
   margin-bottom: 15px;
   position: relative;
   margin-right: 40px;
+}
+@media (max-width: 1199px) {
+  .about__skills-item {
+    margin-right: 20px;
+  }
 }
 .about__skills-item:last-child {
   margin-left: 0;
@@ -680,6 +809,11 @@ h1, h2 {
   transform: translate(-50%, -50%);
   margin: 0;
   color: #0e695c;
+}
+@media (max-width: 480px) {
+  .about__skills-item {
+    margin-right: 0;
+  }
 }
 
 .g-circles {
@@ -695,6 +829,8 @@ h1, h2 {
 .map {
   width: 100%;
   height: 800px;
+  background-image: url("/img/map.png");
+  background-size: cover;
 }
 .map-container {
   position: relative;
@@ -702,13 +838,18 @@ h1, h2 {
 
 .contacts {
   position: absolute;
-  min-width: 290px;
+  min-width: 350px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 30px 45px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
+}
+@media (max-width: 991px) {
+  .contacts {
+    top: 38%;
+  }
 }
 .contacts__title {
   text-align: center;
@@ -772,9 +913,20 @@ h1, h2 {
   padding: 0 30px;
   margin-bottom: 10px;
 }
+@media (max-width: 991px) {
+  .footer__links {
+    display: block;
+    text-align: center;
+  }
+}
 .footer__socials {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .footer__socials {
+    justify-content: center;
+  }
 }
 .footer__social-item {
   margin-left: 10px;
@@ -797,6 +949,12 @@ h1, h2 {
 .footer__links-list {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .footer__links-list {
+    margin-bottom: 15px;
+    justify-content: center;
+  }
 }
 .footer__item {
   margin-left: 42px;
@@ -823,4 +981,10 @@ h1, h2 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+@media (max-width: 991px) {
+  .footer__text {
+    display: block;
+    text-align: center;
+  }
 }

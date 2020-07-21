@@ -2,28 +2,43 @@
   display: flex;
   position: relative;
 
+  @include breakpoint(xs) {
+    display: block;
+  }
+
   &__me {
+    @include breakpoint(xs) {
+      text-align: center;
+    }
+
     &--general {
       width: 50%;
       display: flex;
       justify-content: space-between;
 
       @include breakpoint(xl) {
-        flex-direction: column;
+        display: block;
+      }
+
+      @include breakpoint(xs) {
+        padding-top: 35px;
+        width: 100%;
       }
     }
 
-    padding-top: 20px;
+    padding: 20px;
 
     &:first-child {
       background-color: #f0efe9;
-      padding-right: 20px;
     }
 
     &:last-child {
       width: 51%;
       background-color: #f0ebe0;
-      padding-left: 20px;
+
+      @include breakpoint(xs) {
+        width: 100%;
+      }
     }
 
     &-subtitile {
@@ -51,12 +66,20 @@
         margin-bottom: 60px;
       }
 
+      @include breakpoint(xs) {
+        margin-bottom: 42px;
+      }
+
       h2 {
         position: relative;
         z-index: 1;
         display: inline-block;
         font-size: 63px;
         line-height: 1.2;
+
+        @include breakpoint(sm) {
+          font-size: 49px;
+        }
 
         &:before {
           @include title-line('before', 'center', #d0d0cf);
@@ -92,12 +115,18 @@
           height: 135px;
           top: -25px;
         }
+
+        @include breakpoint(sm) {
+          width: 315px;
+          height: 110px;
+          top: -32px;
+        }
       }
     }
   }
 
   &__info {
-    width: 445px;
+    max-width: 445px;
 
     @include breakpoint(xl) {
       margin: auto;
@@ -122,9 +151,31 @@
 
       color: #455a64;
 
+      br {
+        display: none;
+
+        @include breakpoint(sm) {
+          display: block;
+        }
+
+        @include breakpoint(xs) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(sm) {
+        margin-bottom: 10px;
+      }
+
       h2 {
         position: relative;
         display: inline-block;
+
+        @include breakpoint(sm) {
+          line-height: 1;
+          font-size: 30px;
+        }
+
         &:before {
           @include title-line('before', 'center', #455a64);
           content: '';
@@ -142,6 +193,15 @@
       line-height: 1.5;
       font-family: 'Roboto', sans-serif;
       color: #455a64;
+
+      @include breakpoint(sm) {
+        margin-bottom: 23px;
+      }
+
+      @include breakpoint(xs) {
+        margin-bottom: 10px;
+        padding: 0 30px;
+      }
     }
   }
 
@@ -150,6 +210,16 @@
       margin-bottom: 22px;
       display: flex;
       flex-wrap: wrap;
+
+      @include breakpoint(sm) {
+        justify-content: center;
+        // margin-left: 40px;
+      }
+
+      @include breakpoint(xxxs) {
+        margin-left: 0;
+        justify-content: space-between;
+      }
     }
 
     &-title {
@@ -158,12 +228,20 @@
       font-family: 'Roboto', sans-serif;
       font-size: 28px;
       font-weight: 500;
+
+      @include breakpoint(xs) {
+        font-size: 21px;
+      }
     }
 
     &-item {
       margin-bottom: 15px;
       position: relative;
       margin-right: 40px;
+
+      @include breakpoint(md) {
+        margin-right: 20px;
+      }
 
       &:last-child {
         margin-left: 0;
@@ -176,6 +254,10 @@
         transform: translate(-50%, -50%);
         margin: 0;
         color: #0e695c;
+      }
+
+      @include breakpoint(xxxs) {
+        margin-right: 0;
       }
     }
   }
