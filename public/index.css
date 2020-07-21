@@ -758,7 +758,7 @@ h1, h2 {
 @media (max-width: 767px) {
   .about__me-text {
     margin-bottom: 10px;
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 .about__skills-list {

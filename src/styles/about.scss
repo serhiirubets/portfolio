@@ -200,7 +200,7 @@
 
       @include breakpoint(xs) {
         margin-bottom: 10px;
-        padding: 0 30px;
+        padding: 0 15px;
       }
     }
   }
@@ -213,7 +213,6 @@
 
       @include breakpoint(sm) {
         justify-content: center;
-        // margin-left: 40px;
       }
 
       @include breakpoint(xxxs) {
