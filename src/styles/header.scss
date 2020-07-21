@@ -15,27 +15,35 @@
     min-height: 514px;
   }
 
-  &:after, &:before {
-    content: "";
+  .triangle {
     bottom: 0;
     position: absolute;
     width: 51%;
     height: 9vw;
-    background-size: cover;
-  }
 
-  &:after {
-    left: 0;
-    background-image: url('/img/about_bg_left.svg');
-  }
+    &--left {
+      left: -9px;
 
-  &:before {
-    right: 0;
-    background-image: url('/img/about_bg_right.svg');
+      svg {
+        fill: #f0efe9;
+      }
+    }
 
-    @include breakpoint(xs) {
-      background-image: url('/img/about_bg_left.svg');
+    &--right {
+      right: 0;
       transform: scaleX(-1);
+
+      svg {
+        fill: #f0ebe0;
+
+        @include breakpoint(xs) {
+          fill: #f0efe9;
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
     }
   }
 

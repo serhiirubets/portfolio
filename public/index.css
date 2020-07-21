@@ -377,27 +377,32 @@ template {
     min-height: 514px;
   }
 }
-.header:after, .header:before {
-  content: "";
+.header .triangle {
   bottom: 0;
   position: absolute;
   width: 51%;
   height: 9vw;
-  background-size: cover;
 }
-.header:after {
-  left: 0;
-  background-image: url("/img/about_bg_left.svg");
+.header .triangle--left {
+  left: -9px;
 }
-.header:before {
+.header .triangle--left svg {
+  fill: #f0efe9;
+}
+.header .triangle--right {
   right: 0;
-  background-image: url("/img/about_bg_right.svg");
+  transform: scaleX(-1);
+}
+.header .triangle--right svg {
+  fill: #f0ebe0;
 }
 @media (max-width: 767px) {
-  .header:before {
-    background-image: url("/img/about_bg_left.svg");
-    transform: scaleX(-1);
+  .header .triangle--right svg {
+    fill: #f0efe9;
   }
+}
+.header .triangle svg {
+  width: 100%;
 }
 .header__nav {
   margin-bottom: 88px;

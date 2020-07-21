@@ -1,0 +1,49 @@
+<header class="header">
+  <div class="container">
+    <div class="header__nav">
+      <ul class="socials">
+        {{#each links}}
+          <li class="socials__item socials__item--{{icon}}">
+            <a href="{{url}}" target="_blank" class="socials__link"><img src="/img/icons/{{icon}}.svg"
+                                                                         alt="{{icon}} icon"></a>
+          </li>
+        {{/each}}
+      </ul>
+
+      <a href="/menu" class="header__menu">
+        <img src="/img/icons/hamburger.svg" alt="menu icon">
+      </a>
+    </div>
+
+    <div class="header__info">
+      <div class="header__info-inner">
+        <p class="header__ava"><img src="/img/rubets-photo.jpg" alt="rubets photo"></p>
+        <h1 class="header__name">Serhii Rubets</h1>
+        <h2 class="header__text">Fullstack JS developer</h2>
+      </div>
+    </div>
+
+    <a href="/about-me" class="header__arrow-down"><img src="/img/icons/arrow_down.svg" alt="arrow down icon"></a>
+
+
+    {{> navbar}}
+  </div>
+  <div class="triangle triangle--left">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px"
+         xml:space="preserve">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z"/>
+        </g>
+    </svg>
+  </div>
+  <div class="triangle triangle--right">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px"
+         xml:space="preserve">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z"/>
+        </g>
+    </svg>
+  </div>
+</header>
